@@ -16,8 +16,8 @@ public class LoginTests extends AppiumConfig {
 //        boolean result = new SplashScreen(driver)
 //                .checkCurrentVersion("Version 1.0.0")
         boolean result = new AuthenticationScreen(driver)
-                .fillEmail("p.v.2977187@gmail.com")
-                .fillPassword("P29348092l@")
+                .fillEmail("marym@gmail.com")
+                .fillPassword("Mm12345@")
                 .submitLogin().isActivityTitleDisplayed("Contact list");
         Assert.assertTrue(result);
     }

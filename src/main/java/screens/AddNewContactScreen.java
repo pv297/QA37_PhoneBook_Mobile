@@ -48,8 +48,19 @@ public class AddNewContactScreen extends BaseScreen{
         return this;
     }
 
-    public AddNewContactScreen isErrorConteinsText(String text){
+    public AddNewContactScreen isErrorContainsText(String text){
         checkAlertText(text);
         return this;
+    }
+    public ContactListScreen createContact(Contact contact){
+        should(nameEditText,5);
+        type(nameEditText,contact.getName());
+        type(lastNameEditText, contact.getLastName());
+        type(emailEditText, contact.getEmail());
+        type(phoneEditText, contact.getPhone());
+        type(addressEditText, contact.getAddress());
+        type(descriptionEditText,contact.getDescription());
+        createButton.click();
+        return new ContactListScreen(driver);
     }
 }

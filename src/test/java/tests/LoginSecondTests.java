@@ -29,6 +29,7 @@ public class LoginSecondTests  extends AppiumConfig {
     public void loginWrongEmail(){
         new AuthenticationScreen(driver).fillLoginRegistrationForm(Auth.builder()
                         .email("marymgmail.com").password("Mm12345@").build())
-                .submitLoginPasswordNegative().isErrorMessageContainsText("Login or Password incorrect");
+                .submitLoginPasswordNegative()
+                .isErrorMessageContainsText("Login or Password incorrect");
     }
 }

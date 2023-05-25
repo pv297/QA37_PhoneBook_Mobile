@@ -9,8 +9,8 @@ public class LoginSecondTests  extends AppiumConfig {
 @Test
     public void loginSuccess(){
         new AuthenticationScreen(driver)
-                .fillEmail("niln@gmail.com")
-                .fillPassword("Nn12345$")
+                .fillEmail("marym@gmail.com")
+                .fillPassword("Mm12345@")
                 .submitLogin()
                 .isAccountOpened()
                 .logout();
